@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CreateAccountPage extends BasePage {
 	
+	private static int counter = 1;
 	public CreateAccountPage(WebDriver driver) {
 		super(driver);
 	}
@@ -258,6 +259,7 @@ public class CreateAccountPage extends BasePage {
                 By.xpath("//div[contains(@class,'x-grid3-row')]")
         ));
     }
+       
     public void createTestAccount(String accountName) {
     	waitForVisibility(accountTab).click();
         waitForVisibility(newButton).click();

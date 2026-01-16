@@ -1,5 +1,8 @@
 package pages;
 
+import java.util.List;
+import java.util.Random;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,6 +49,7 @@ public class AccountsHomePage extends BasePage {
     By firstRecentAccountLink = By.xpath("//table[contains(@class,'list')]//tr[2]/th/a");
     
     //Page objects for Edit Opportunity to get the recent account name
+    
     @FindBy(xpath = "//table[@class='list']//tr[2]//a")
     WebElement firstRecentAccountName;
 
@@ -78,9 +82,16 @@ public class AccountsHomePage extends BasePage {
     }
 
     //  Get first account in Recent Accounts
-    public String getFirstRecentAccountName() {
-        waitForVisibility(firstRecentAccountLink);
-        return driver.findElement(firstRecentAccountLink).getText().trim();
+    public String getRandomAccountName() {
+    	List<WebElement> accounts = driver.findElements(
+    	        By.xpath("//table[contains(@class,'list')]//tr[position()>1]/th/a")
+    	    );
+
+    	    Random random = new Random();
+    	    int index = random.nextInt(accounts.size()); // random index
+
+    	    return accounts.get(index).getText().trim();
+
     }
     public void openLastActivityReport() {
         click(reportLink);

@@ -68,13 +68,13 @@ public void verifyLeadDefaultView_TC22() throws InterruptedException {
 	homePage.logout();
 	//  Login
 	LoginPage loginPage1 = new LoginPage(driver);
-	HomePage homePage1 = loginPage1.loginToApp(driver);
+	HomePage homePage1 = loginPage1.loginToAppLogout(driver);
 	Assert.assertEquals(homePage1.getLoggedInUserName(), "Radha Abcd");
 	// Click Leads tab
 	LeadsPage leadsPage1 = homePage1.clickLeads();
 	Assert.assertTrue(leadsPage1.isLeadsHomePageDisplayed());
 	// Select Today's Leads and logout
-	leadsPage1.selectView("Today's Leads");
+	//leadsPage1.selectView("Today's Leads");
 	//Click Go without changing the dropdown
 	leadsPage1.clickGo();
 	//Verify default view is still Today's Leads

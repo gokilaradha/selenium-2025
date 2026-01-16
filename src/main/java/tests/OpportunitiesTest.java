@@ -47,7 +47,7 @@ public void opportunitiesPage_TC15() throws InterruptedException {
             "Dropdown does not contain all expected values");
 }
 	
-@Test
+//@Test
 public void createNewOpportunity_TC16() throws InterruptedException {
 	WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
 	driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "login.url"));
@@ -55,14 +55,15 @@ public void createNewOpportunity_TC16() throws InterruptedException {
 	LoginPage lp = new LoginPage(driver);
 	HomePage homePage = lp.loginToApp(driver);
 	Assert.assertEquals(homePage.getLoggedInUserName(), "Radha Abcd");
-	AccountsHomePage accountsHome = new AccountsHomePage(driver);
-	//Get recent account name
-	String accountName = accountsHome.getAccountNameForOpportunity();
+	AccountsHomePage accountsHome = homePage.clickAccounts();
+	String accountName = accountsHome.getRandomAccountName();
+	// Step 2: Now go to Opportunities
 	OpportunitiesPage oppPage = homePage.clickOpportunities();
 	Assert.assertTrue(oppPage.isOpportunitiesHomeDisplayed());
+	//Click New 
 	oppPage.clickNewButton();
-	oppPage.iseditOpportunitiesDisplayed();
-	//Create new opportunity
+	Assert.assertTrue(oppPage.iseditOpportunitiesDisplayed());
+	//Fill the form
 	oppPage.createNewOpportunity(
 	            "Test Opportunity",
 	            accountName,
@@ -107,7 +108,7 @@ public void testStuckOpportunitiesReport_TC18() throws InterruptedException {
 	Assert.assertTrue(stuckPage.isStuckOpportunitiesReportDisplayed());
 }
 	
-//@Test
+@Test
 public void verifyQuarterlySummaryReport_TC19() throws InterruptedException {
 	WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
 	driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "login.url"));

@@ -38,7 +38,7 @@ public void verifyAccountMerge_TC13()throws InterruptedException {
     Assert.assertTrue(step2.isComparisonTableDisplayed(), "Comparison table not displayed");
     step2.proceedWithMerge();
     Assert.assertTrue(accountsHome.isAccountsHomePageLoaded(), "Accounts Home page did not load");
-    String actualTopAccount = accountsHome.getFirstRecentAccountName();
+    String actualTopAccount = accountsHome.getRandomAccountName();
     System.out.println("Actual top recent account: " + actualTopAccount);
     Assert.assertTrue(actualTopAccount.startsWith(baseName),"Merged account does not start with expected base name");
 }

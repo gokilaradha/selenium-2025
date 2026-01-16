@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-15T11:01:43 EST" name="Default suite" finished-at="2026-01-15T11:02:18 EST" duration-ms="34831">
+  <suite started-at="2026-01-15T22:39:08 EST" name="Default suite" finished-at="2026-01-15T22:39:22 EST" duration-ms="13930">
     <groups>
     </groups>
-    <test started-at="2026-01-15T11:01:43 EST" name="Default test" finished-at="2026-01-15T11:02:18 EST" duration-ms="34831">
-      <class name="tests.OpportunitiesTest">
-        <test-method signature="createNewOpportunity_TC16()[pri:0, instance:tests.OpportunitiesTest@51399530]" started-at="2026-01-15T11:01:43 EST" name="createNewOpportunity_TC16" finished-at="2026-01-15T11:02:18 EST" duration-ms="34800" status="FAIL">
+    <test started-at="2026-01-15T22:39:08 EST" name="Default test" finished-at="2026-01-15T22:39:22 EST" duration-ms="13930">
+      <class name="tests.LeadsTest">
+        <test-method signature="verifyLeadDefaultView_TC22()[pri:0, instance:tests.LeadsTest@51399530]" started-at="2026-01-15T22:39:08 EST" name="verifyLeadDefaultView_TC22" finished-at="2026-01-15T22:39:22 EST" duration-ms="13898" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[invalid session id: session deleted as the browser has closed the connection
@@ -16,9 +16,9 @@ from disconnected: not connected to DevTools
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7313b1fc2eb745894f8d4a22f40a6d3f, findElement {value=emc, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\Gokila\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64831}, goog:processID: 21292, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64831/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7313b1fc2eb745894f8d4a22f40a6d3f]]>
+Command: [182f63514675c45e5e3844add9c27d47, findElement {using=id, value=emc}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\Gokila\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62039}, goog:processID: 21824, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62039/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 182f63514675c45e5e3844add9c27d47]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
@@ -27,9 +27,9 @@ from disconnected: not connected to DevTools
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7313b1fc2eb745894f8d4a22f40a6d3f, findElement {value=emc, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\Gokila\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64831}, goog:processID: 21292, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64831/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7313b1fc2eb745894f8d4a22f40a6d3f
+Command: [182f63514675c45e5e3844add9c27d47, findElement {using=id, value=emc}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\Gokila\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62039}, goog:processID: 21824, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62039/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 182f63514675c45e5e3844add9c27d47
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -51,7 +51,7 @@ at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invok
 at jdk.proxy2/jdk.proxy2.$Proxy10.isDisplayed(Unknown Source)
 at pages.LoginPage.enterVerificationCode(LoginPage.java:100)
 at pages.LoginPage.loginToApp(LoginPage.java:64)
-at tests.OpportunitiesTest.createNewOpportunity_TC16(OpportunitiesTest.java:56)
+at tests.LeadsTest.verifyLeadDefaultView_TC22(LeadsTest.java:60)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -85,8 +85,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewOpportunity_TC16 -->
-      </class> <!-- tests.OpportunitiesTest -->
+        </test-method> <!-- verifyLeadDefaultView_TC22 -->
+      </class> <!-- tests.LeadsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
