@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MergeAccountsStep2Page extends BasePage {
 	
@@ -48,7 +49,13 @@ public class MergeAccountsStep2Page extends BasePage {
     public void proceedWithMerge() {
         clickMerge();        
         acceptMergeAlert();  
+        waitForAccountsHomePage();
+
     }
 
+    private void waitForAccountsHomePage() {
+        wait.until(ExpectedConditions.titleContains("Accounts"));
+        System.out.println("Accounts Home page loaded after merge.");
+    }
 
 }

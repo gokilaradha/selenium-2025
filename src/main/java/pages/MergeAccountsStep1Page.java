@@ -111,6 +111,12 @@ public class MergeAccountsStep1Page extends BasePage {
     public void clickNext() {
     	waitForClick(nextBtn);
         click(nextBtn);
-
     }
+    
+    public String getFirstAccountName() {
+        By firstAccountName = By.xpath("(//table[contains(@class,'list')]//tr//th/a)[1]");
+        waitForVisibility(firstAccountName);
+        return driver.findElement(firstAccountName).getText().trim();
+    }
+
 }

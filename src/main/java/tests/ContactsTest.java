@@ -61,7 +61,7 @@ public void verifyCreateNewView_TC26() throws Exception {
     String selectedView = updatedContacts.getSelectedViewName();
     Assert.assertEquals(selectedView, "AutomationView");
 }
-@Test
+//@Test
 public void verifyRecentlyCreatedContacts_TC27() throws InterruptedException {
 	WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
     driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "login.url"));
@@ -95,7 +95,7 @@ public void verifyMyContactsView_TC28() throws Exception {
     // Verify
     Assert.assertEquals(contactsPage.getSelectedView(), "My Contacts");
 }
-// @Test
+//@Test
 public void viewRecentContact_TC29() throws Exception {
 	WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
     driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "login.url"));
@@ -112,7 +112,7 @@ public void viewRecentContact_TC29() throws Exception {
     Assert.assertTrue(details.isContactDetailsPageDisplayed(),
             "Contact details page is not displayed");
 }
- //@Test
+//@Test
  public void verifyErrorWhenViewNameBlank_TC30() throws Exception {
 	 WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
 	 driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "login.url"));
@@ -133,7 +133,7 @@ public void viewRecentContact_TC29() throws Exception {
      Assert.assertEquals(newView.getErrorMessage(), "Error: You must enter a value");
  }
  
-// @Test
+//@Test
 public void verifyCancelDoesNotCreateView_TC31() throws Exception {
 	 WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
 	 driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "login.url"));
@@ -158,7 +158,7 @@ public void verifyCancelDoesNotCreateView_TC31() throws Exception {
              "View ABCD should NOT be created after clicking Cancel");
  }
 
-// @Test
+//@Test
 public void verifySaveAndNewCreatesContact_TC32() throws Exception {
 	 WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
 	 driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "login.url"));

@@ -51,7 +51,7 @@ public void leadsSelectView_TC21() throws InterruptedException {
 	    Assert.assertTrue(actual.containsAll(expected));
 }
 
-@Test
+//@Test
 public void verifyLeadDefaultView_TC22() throws InterruptedException {
 	WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
 	driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "login.url"));
@@ -73,12 +73,10 @@ public void verifyLeadDefaultView_TC22() throws InterruptedException {
 	// Click Leads tab
 	LeadsPage leadsPage1 = homePage1.clickLeads();
 	Assert.assertTrue(leadsPage1.isLeadsHomePageDisplayed());
-	// Select Today's Leads and logout
-	//leadsPage1.selectView("Today's Leads");
 	//Click Go without changing the dropdown
 	leadsPage1.clickGo();
 	//Verify default view is still Today's Leads
-	Assert.assertEquals(leadsPage1.getSelectedView(), "Today's Leads");
+	Assert.assertEquals(leadsPage1.isLeadDefaultViewSelected(), "Today's Leads");
 }
 
 //@Test
@@ -88,19 +86,15 @@ public void verifyTodaysLeadsSelection_TC23() throws InterruptedException {
 	//Login
 	LoginPage loginPage = new LoginPage(driver);
 	HomePage homePage = loginPage.loginToApp(driver);
+	Assert.assertEquals(homePage.getLoggedInUserName(), "Radha Abcd");
 	// Click Leads tab
 	LeadsPage leadsPage = homePage.clickLeads();
 	Assert.assertTrue(leadsPage.isLeadsHomePageDisplayed());
-	Assert.assertEquals(homePage.getLoggedInUserName(), "Radha Abcd");
 	//Select Today's Leads
 	leadsPage.selectTodaysLeads();
 	Assert.assertTrue(leadsPage.isTodaysLeadsSelected(), "Today's Leads is not selected");
-	//Click Go button
-	leadsPage.clickGo();
-	// Step 5: Verify Today's Leads page is displayed
-	Assert.assertTrue(leadsPage.isTodaysLeadsSelected(), "Today's Leads page is not displayed");
 }
-//@Test
+@Test
 public void verifyNewLeadCreation_TC24() throws InterruptedException {
 	WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
 	driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "login.url"));

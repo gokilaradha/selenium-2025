@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.LeadsTest">
+      <class name="tests.MergeAccountsTest">
         <methods>
-          <include name="verifyLeadDefaultView_TC22"/>
+          <include name="verifyAccountMerge_TC13"/>
         </methods>
-      </class> <!-- tests.LeadsTest -->
+      </class> <!-- tests.MergeAccountsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

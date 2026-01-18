@@ -17,14 +17,13 @@ public class TestDataHelper {
     public void ensureThreeAccountsExist(String baseName) {
 
         MergeAccountsStep1Page step1 = new MergeAccountsStep1Page(driver);
-        CreateAccountPage createPage = new CreateAccountPage(driver);
-        HomePage homePage =new HomePage(driver);
-        step1.searchAccount(baseName);
+         step1.searchAccount(baseName);
         int available = step1.getAvailableAccountsCount();
 
         if (available < 3) {
             int missing = 3 - available;
-
+            CreateAccountPage createPage = new CreateAccountPage(driver);
+            HomePage homePage =new HomePage(driver);
             for (int i = 0; i < missing; i++) {
                 String name = baseName + " " + System.currentTimeMillis();
                 createPage.createTestAccount(name);

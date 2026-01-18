@@ -22,6 +22,9 @@ public class LeadsPage extends BasePage {
 	
 	@FindBy(xpath="//input[@title='Go!']")  // Go button
     WebElement goButton;
+	
+	@FindBy(xpath="//select[@name='fcf']")
+	WebElement selectedViewPage;
 
 	@FindBy(name = "new")   // New button in Recent Leads
     WebElement newButton;
@@ -54,12 +57,17 @@ public class LeadsPage extends BasePage {
         select.selectByVisibleText("Today's Leads");
     }
 
-    public boolean isTodaysLeadsSelected() {
-        Select select = new Select(waitForVisibility(leadsViewDropdown));
-        return select.getFirstSelectedOption().getText().trim().equals("Today's Leads");
+    public String isLeadDefaultViewSelected() {
+        Select select = new Select(waitForVisibility(selectedViewPage));
+        return select.getFirstSelectedOption().getText().trim();
+        
     }
 
-
+    public boolean isTodaysLeadsSelected() {
+        Select select = new Select(waitForVisibility(selectedViewPage));
+        return select.getFirstSelectedOption().getText().trim().equals("Today's Leads");
+   }
+    
     public void clickGo() {
         waitForVisibility(goButton).click();
     }

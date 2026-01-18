@@ -26,7 +26,7 @@ public void verifyAccountMerge_TC13()throws InterruptedException {
 	Assert.assertTrue(accountsHome.verifyAccountPage("Radha Abcd"),"Accounts page not loaded or username incorrect");
 	accountsHome.clickMergeAccounts();  
     MergeAccountsStep1Page step1 = new MergeAccountsStep1Page(driver);
-    MergeAccountsStep2Page step2 = new MergeAccountsStep2Page(driver);
+    
     Assert.assertTrue(step1.isMergePageDisplayed());
     // Use Same base name for creation and searching
     String baseName = "Test Account";
@@ -34,13 +34,15 @@ public void verifyAccountMerge_TC13()throws InterruptedException {
     dataHelper.ensureThreeAccountsExist(baseName);
     step1.searchAccount(baseName);
     step1.proceedToStep2(baseName);
+    MergeAccountsStep2Page step2 = new MergeAccountsStep2Page(driver);
     Assert.assertTrue(step2.isStep2FormDisplayed(), "Step 2 form title not displayed");
     Assert.assertTrue(step2.isComparisonTableDisplayed(), "Comparison table not displayed");
     step2.proceedWithMerge();
     Assert.assertTrue(accountsHome.isAccountsHomePageLoaded(), "Accounts Home page did not load");
-    String actualTopAccount = accountsHome.getRandomAccountName();
-    System.out.println("Actual top recent account: " + actualTopAccount);
-    Assert.assertTrue(actualTopAccount.startsWith(baseName),"Merged account does not start with expected base name");
+    String mergedName = step1.getFirstAccountName();
+    Assert.assertTrue(mergedName.startsWith(baseName), "Merged account name is incorrect");
+
+
 }
 }
 

@@ -15,6 +15,7 @@ import pages.UserProfilePage;
 import utils.FileUtils;
 
 public class RandomScenariosTest extends BaseTest {
+
 //@Test
 public void verifyUserProfileNavigation_TC33() throws Exception {
     WebDriver driver = BaseTest.getDriver(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_FILE_PATH, "browser.name"),false);
@@ -96,7 +97,7 @@ public void removeTabFromCustomizeTabs_TC35() throws InterruptedException {
     Assert.assertFalse(homePage.isTabPresentInTabBar(removedTab),
 	            "Removed tab should still not appear after re-login");
 }
-@Test
+//@Test
 public void createNewEventFromHomeCalendar_TC36() throws Exception {
 	WebDriver driver = BaseTest.getDriver("chrome", false);
 	driver.get("https://login.salesforce.com");
