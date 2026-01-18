@@ -2,6 +2,6 @@
 /test-output
 /src/main/resources/logs
 /src/main/resources/screenshots
-src/main/resources/reports
+/src/main/resources/reports
 .settings
 .project

@@ -68,8 +68,8 @@ public static WebDriver getDriver(String browserName,boolean isHeadless) {
 		}
 	
 	public static String getSfdcDirectLoginUrl() {
-		 final String CONSUMER_KEY ="";
-		 final String CONSUMER_SECRET	=""	;
+		 final String CONSUMER_KEY ="3MVG9rZjd7MXFdLj_gsb_rL6t4sXCgfU2yradiexDm1YdN6vQbHiU1KsodpmJXVXdUjDBhhvRpHMO7YhTh.7u";
+		 final String CONSUMER_SECRET	="5B95C3BF3E436B35EC874949EF56302FCD83B80601C8F08339EBDA295C3A2423"	;
 		 SalesforceAuth auth= new SalesforceAuth(CONSUMER_KEY,CONSUMER_SECRET,false);
 		 String url= auth.start();
 		 System.out.println(url);
